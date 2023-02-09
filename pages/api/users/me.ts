@@ -1,3 +1,6 @@
 export default function handler (req, res){
-    res.json({data:{me: true}})
+    if(req.method === 'post') {
+
+        res.json({data:{me: true}})
+    }
 }
