@@ -14,7 +14,7 @@ const getData = async ()=> {
 export default async function Home() {
   const data = await getData()
   // const post = data.data.users[0].data.name
-  throw new Error('some error we found')
+  // throw new Error('some error we found')
   return (
     <main className={styles.main}>
       <Suspense fallback={<Loader/>}>
