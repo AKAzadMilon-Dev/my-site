@@ -4,12 +4,19 @@ import styles from './page.module.css'
 import Header from '../components/Header'
 const inter = Inter({ subsets: ['latin'] })
 
+const getData = async ()=> {
+  const data = await fetch("https://jsonplaceholder.typicode.com/users")
+  return data.json()
+}
 
-export default function Home() {
+export default async function Home() {
+  const data = await getData()
+  // const post = data.data.users[0].data.name
   return (
     <main className={styles.main}>
       <Header/>
       <div className={styles.description}>
+        {/* <h1>{post}</h1> */}
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>app/page.tsx</code>
